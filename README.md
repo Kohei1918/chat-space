@@ -47,8 +47,6 @@ Things you may want to cover:
 ##  messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text||
-|email|string||
 |group_id|refference|null: false, foreign_key: true|
 |user_id|refference|null: false, foreign_key: true|
 
