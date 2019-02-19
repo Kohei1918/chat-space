@@ -1,5 +1,5 @@
   .wrapper { display: flex;
-            margin-top:20px;
+            margin-top: 28px;
    .chat {
   width: calc(100% - 300px);
 
@@ -76,6 +76,7 @@
       float: left;
       height: 50px;
       width: calc(100% - 150px);
+      padding-left: 10px;
     }
     &__mask {
       background-color: #fff;
@@ -99,6 +100,7 @@
       height: 50px;
       margin-left: 15px;
       padding: 0 30px;
+      position: absolute;
     }
   }
 }

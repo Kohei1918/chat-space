@@ -40,15 +40,10 @@
 
     .form
       %form
-        %input.form__message
+        %input.form__message{placeholder: 'type a message'}
         .form__mask
           %label.form__mask__image
-
+          %i.fa.fa-image
             %input.hidden{type: 'file'}
         %input.form__submit{type: 'submit', value: 'Send'}
-
-
-
-
-
 
