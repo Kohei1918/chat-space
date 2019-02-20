@@ -1,5 +1,14 @@
+ $white: #fff;
+$side_blue_dark: #253141;
+$side_blue_light: #2f3e51;
+$light_blue: #38AEF0;
+$light_gray: #999;
+$black: #434a54;
+$alert_orange: #F35500;
+
   .wrapper { display: flex;
 
+      }
    .chat {
   width: calc(100% - 300px);
 
@@ -33,6 +42,10 @@
       line-height: 40px;
       margin-top: 28px;
       padding: 0 20px;
+      &__button {
+        color: #38AEF0;
+        text-decoration: none;
+      }
     }
   }
 
@@ -104,4 +117,4 @@
     }
   }
 }
-}
+
