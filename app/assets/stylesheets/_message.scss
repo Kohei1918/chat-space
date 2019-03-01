@@ -10,7 +10,10 @@ $alert_orange: #F35500;
 
       }
    .chat {
+  height: 100vh;
   width: calc(100% - 300px);
+  float: right;
+  position: relative;
 
   .header {
     box-sizing: border-box;
@@ -54,7 +57,9 @@ $alert_orange: #F35500;
     box-sizing: border-box;
     padding: 46px 40px 0;
     height: calc(100% - 100px - 90px);
+    overflow: scroll;
     .message {
+
       .upper-message {
         display: flex;
         &__user-name {
@@ -83,13 +88,18 @@ $alert_orange: #F35500;
     background-color: #DDDDDD;
     box-sizing: border-box;
     height: 90px;
+    width: calc(100vw - 300px);
     padding: 20px 50px 20px 40px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
     &__message {
       border: none;
       float: left;
       height: 50px;
       width: calc(100% - 150px);
       padding-left: 10px;
+
     }
     &__mask {
       background-color: #fff;
