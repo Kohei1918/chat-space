@@ -1,5 +1,5 @@
 $(function() {
-  function buildHTML(message){
+  function buildSendMessageHTML(message){
     image = (message.image === null) ? "" : `<img src="${message.image}" class="lower-message__image">`
     var html = `<div class="message" data-message-id="${message.id}">
                   <div class="upper-message">
@@ -31,8 +31,8 @@ $(function() {
       processData: false,
       contentType: false
     })
-    .done(function(data){
-      var html = buildHTML(data);
+    .done(function(message_data){
+      var html = buildSendMessageHTML(message_data);
       $('.messages').append(html)
       $('#new_message')[0].reset()
       $(`.textbox`).val('');
