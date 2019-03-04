@@ -45,4 +45,28 @@ $(function() {
       $('.form__submit').prop('disabled',false);
     })
   })
+
+   var interval = setInterval(function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+      var lastMessageId = $('.message:last').data('message-id') || 0;
+      $.ajax({
+        url: location.href,
+        type: 'GET',
+        data: { id: lastMessageId },
+        dataType: 'json'
+      })
+      .done(function(data) {
+        var insertHTML = '';
+        data.forEach(function(message) {
+          insertHTML = buildSendMessageHTML(message);
+          $('.messages').append(insertHTML);
+          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
+        });
+      })
+      .fail(function(data) {
+        alert('自動更新に失敗しました');
+      });
+    } else {
+      clearInterval(interval);
+    }}, 5000 );
 });
