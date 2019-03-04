@@ -56,8 +56,6 @@ $(function() {
         dataType: 'json'
       })
       .done(function(data) {
-
-        var id = $('.message').data('message-id')
         var insertHTML = '';
         data.forEach(function(message) {
           insertHTML = buildSendMessageHTML(message);
